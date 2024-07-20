@@ -9,8 +9,8 @@ boxes.forEach(e => {
         if(!isGameOver && e.innerHTML === ""){
             e.innerHTML = turn;
             changeTurn();
-            checkDraw();
             checkWin();
+            checkDraw();
         }
     })
 })
