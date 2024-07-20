@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: #252a34;
+    background-color: #1d325b;
     margin: 0;
     padding: 0;
     width: 100vw;
@@ -27,9 +27,10 @@ body{
     margin: 0;
     grid-column-start: 1;
     grid-column-end: 3;
+    font-size: 1.5rem;
 }
 .turn-container .turn-box{
-    border: 3px solid #000;
+    border: 3px solid #1f83b1;
     font-size: 1.6rem;
     font-weight: 700;
 }
@@ -47,7 +48,7 @@ body{
     left: 0;
     width: 85px;
     height: 40px;
-    background-color: #ff2e63;
+    background-color: #8D493A;
     z-index: -1;
 }
 .main-grid{
@@ -63,17 +64,18 @@ body{
     cursor: pointer;
     font-size: 2rem;
     font-weight: 700;
-    border: 2px solid #000;
+    border: 2px solid #1f83b1;
 }
 .box:hover{
-    background-color: #ff2e63;
+    background-color: #8D493A;
 }
 
 #play-again{
-    background-color: #ff2e63;
+    background-color: #8D493A;
     padding: 10px 25px;
     border: none;
     font-size: 1.2rem;
+    font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
     display: none;

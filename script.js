@@ -1,6 +1,6 @@
 let boxes = document.querySelectorAll(".box");
 
-let turn = "X";
+let turn = 'X';
 let isGameOver = false;
 
 boxes.forEach(e => {
@@ -34,13 +34,13 @@ function checkWin() {
     ]
 
     for(let i=0; i<winConditions.length; i++){
-        let v0 = boxes[winConditions[i][0]].innerHTML;
-        let v1 = boxes[winConditions[i][1]].innerHTML;
-        let v2 = boxes[winConditions[i][2]].innerHTML;
+        let vlaue_0 = boxes[winConditions[i][0]].innerHTML;
+        let value_1 = boxes[winConditions[i][1]].innerHTML;
+        let value_2 = boxes[winConditions[i][2]].innerHTML;
 
-        if(v0 != "" && v0 === v1 && v0 == v2){
+        if(vlaue_0 != "" && vlaue_0 === value_1 && vlaue_0 == value_2){
             isGameOver = true;
-            document.querySelector('#result').innerHTML = turn + " Win";
+            document.querySelector('#result').innerHTML = "Player " + turn + " Win";
             document.querySelector('#play-again').style.display = "inline";
             
             for( j=0; j<3; j++){
@@ -60,7 +60,7 @@ function checkDraw() {
         })
         if(isDraw){
             isGameOver = true;
-            document.querySelector('#result').innerHTML =  "Draw";
+            document.querySelector('#result').innerHTML =  "Draw!";
             document.querySelector('#play-again').style.display = "inline";
         }
     }
