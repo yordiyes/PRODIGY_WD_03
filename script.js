@@ -18,7 +18,7 @@ boxes.forEach(e => {
 
 function changeTurn() {
     if(turn === "X"){
-        turn = "O";
+        turn = "O"; 
         document.querySelector(".bg").style.left = "85px";
     }else{
         turn = "X";
@@ -40,9 +40,10 @@ function checkWin() {
 
         if(vlaue_0 != "" && vlaue_0 === value_1 && vlaue_0 == value_2){
             isGameOver = true;
+            changeTurn();
             document.querySelector('#result').innerHTML = "Player " + turn + " Win";
             document.querySelector('#play-again').style.display = "inline";
-            
+            console.log(turn)
             for( j=0; j<3; j++){
                 boxes[winConditions[i][j]].style.backgroundColor = "#08D9D6";
                 boxes[winConditions[i][j]].style.color = "#000";
@@ -56,7 +57,7 @@ function checkDraw() {
         let isDraw = true;
         boxes.forEach(e =>{
             if(e.innerHTML === "") 
-                isDraw = flase;
+                isDraw = false;
         })
         if(isDraw){
             isGameOver = true;
