@@ -7,11 +7,13 @@ boxes.forEach(e => {
     e.innerHTML = ""
 })
 
+
 document.getElementById('pvp-mode').addEventListener('click', ()=> startGame('PVP'));
 document.getElementById('pvc-mode').addEventListener('click', ()=> startGame('PVC'));
 
+
 function startGame(mode){
-    gameMode = mode;
+    gameMode = mode;    
     isGameOver = false;
     turn = 'X';
     document.querySelector('.bg').style.left = "0";
@@ -80,7 +82,7 @@ function checkWin() {
 
         if(value_0 != "" && value_0 === value_1 && value_0 == value_2){
             isGameOver = true;
-            document.querySelector('#result').innerHTML = "Player " + turn + " Win";
+            document.querySelector('#result').innerHTML = "Player " + turn + " Win 🎇";
             document.querySelector('#play-again').style.display = "inline";
             for( j=0; j<3; j++){
                 boxes[winConditions[i][j]].style.backgroundColor = "#08D9D6";
@@ -101,7 +103,7 @@ function checkDraw() {
         })
         if(isDraw){
             isGameOver = true;
-            document.querySelector('#result').innerHTML =  "Draw!";
+            document.querySelector('#result').innerHTML =  "Draw! 🤝";
             document.querySelector('#play-again').style.display = "inline";
         }
     }
